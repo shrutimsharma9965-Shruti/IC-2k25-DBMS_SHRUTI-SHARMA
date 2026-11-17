@@ -1,0 +1,3 @@
+-- Q3. Create dup_countries with the same structure as countries.
+
+CREATE TABLE dup_countries LIKE countries;
