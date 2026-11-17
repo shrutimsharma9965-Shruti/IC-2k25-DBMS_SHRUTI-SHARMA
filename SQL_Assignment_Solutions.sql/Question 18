@@ -1,0 +1,15 @@
+-- Q18. ON DELETE CASCADE and ON UPDATE RESTRICT.
+
+CREATE TABLE employees (
+    employee_id INT UNIQUE,
+    first_name VARCHAR(20),
+    last_name VARCHAR(25),
+    job_id INT,
+    salary DECIMAL(8,2),
+    CONSTRAINT fk_employee_job_delete_cascade
+    FOREIGN KEY (job_id)
+    REFERENCES jobs(job_id)
+    ON DELETE CASCADE
+    ON UPDATE RESTRICT
+) ENGINE = InnoDB;
+
