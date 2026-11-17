@@ -1,0 +1,9 @@
+-- Q7. Allow only Italy, India and China as country names.
+
+CREATE TABLE countries (
+    country_id INT,
+    country_name VARCHAR(50),
+    region_id INT,
+    CONSTRAINT chk_country_name
+    CHECK (country_name IN ('Italy', 'India', 'China'))
+);
