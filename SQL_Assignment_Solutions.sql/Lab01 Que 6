@@ -1,0 +1,10 @@
+-- Q6. Create jobs table with max_salary not exceeding 25000.
+
+CREATE TABLE jobs (
+    job_id VARCHAR(10) PRIMARY KEY,
+    job_title VARCHAR(35) NOT NULL,
+    min_salary DECIMAL(6,0),
+    max_salary DECIMAL(6,0),
+    CONSTRAINT chk_max_salary
+    CHECK (max_salary <= 25000)
+);
