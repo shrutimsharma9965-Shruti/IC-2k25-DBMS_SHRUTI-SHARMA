@@ -1,0 +1,6 @@
+-- Q4. Create a duplicate copy of countries including structure and data.
+
+CREATE TABLE dup_countries LIKE countries;
+
+INSERT INTO dup_countries
+SELECT * FROM countries;
