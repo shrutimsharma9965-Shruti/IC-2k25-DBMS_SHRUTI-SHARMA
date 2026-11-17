@@ -1,0 +1,11 @@
+-- Q14. employee_id must be UNIQUE and job_id must be a FOREIGN KEY.
+
+CREATE TABLE job_history (
+    employee_id INT UNIQUE,
+    start_date DATE,
+    end_date DATE,
+    job_id VARCHAR(10),
+    department_id INT,
+    CONSTRAINT fk_job_history_job
+    FOREIGN KEY (job_id) REFERENCES jobs(job_id)
+) ENGINE = InnoDB;
