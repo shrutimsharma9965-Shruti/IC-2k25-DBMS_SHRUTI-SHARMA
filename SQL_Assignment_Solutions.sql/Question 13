@@ -1,0 +1,9 @@
+-- Q13. Make the combination of country_id and region_id UNIQUE.
+
+CREATE TABLE countries (
+    country_id INT,
+    country_name VARCHAR(50),
+    region_id INT,
+    CONSTRAINT uq_country_region
+    UNIQUE (country_id, region_id)
+);
